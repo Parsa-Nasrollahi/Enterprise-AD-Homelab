@@ -2,7 +2,7 @@
 
 Dieses Projekt dokumentiert den Aufbau eines vollständigen Enterprise-Homelabs unter Verwendung von Proxmox, pfSense und Windows Server 2022. Alle Schritte wurden nach der STAR-Methode (Situation, Task, Action, Result) dokumentiert.
 
-## 🌐 Network Topology
+## Network Topology
 ![Network Topology](Enterprise-Topology.jpg)
 
 ---
@@ -124,6 +124,10 @@ Berechtigungszuweisung: Dem HR-Manager wurden exklusiv für die HR-OU die Rechte
 
 Ergebnis:
 Das Active Directory verfügt nun über eine saubere, GPO-ready Struktur, die mit dem Unternehmenswachstum skalieren kann. Der IT-Helpdesk wird durch die erfolgreiche Delegierung von Standardaufgaben (z.B. Passwort-Resets) an das HR-Management entlastet, ohne die globale Domänensicherheit zu gefährden.
+
+
+** Active Directory Tier-Model Structure:**
+![AD Structure](ad-structure.png)
 
 -------------------------------
 
@@ -261,6 +265,9 @@ Granulares Ordner-Auditing (SACL): Konfiguration der SACL auf NTFS-Ebene für HR
 Ergebnis & Forensische Analyse:
 Ein simulierter Datenverlust wurde im Security Event Log protokolliert. Über die Ereignis-ID 4663 konnte das verursachende Benutzerkonto (Admin-HR) und der genaue Dateipfad zweifelsfrei rekonstruiert werden.
 
+** Automated Network Drive Mapping (GPO):**
+![Mapped Drive](mapped-drive.png)
+
 -------------------------------
 
 Phase 14: Disaster Recovery & System State Backup
@@ -311,5 +318,8 @@ Implementierung einer identitätsbasierten Sicherheitsrichtlinie im AD. Der HR-B
 
 Result:
 Die Sicherheit wurde auf OS-Ebene ausgeweitet. Wenn sich der HR-Mitarbeiter anmeldet, ist CMD blockiert, während der IT-Admin auf demselben System volle Diagnosemöglichkeiten behält.
+
+** Identity-Based Security (CMD Blocked via GPO):**
+![CMD Blocked](cmd-blocked.png)
 
 -------------------------------
