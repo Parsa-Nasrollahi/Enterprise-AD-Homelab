@@ -250,6 +250,9 @@ GPO-Processing: Laufwerk wird im Explorer explizit eingeblendet.
 Ergebnis:
 Nach dem User-Logon wird das abteilungsspezifische Laufwerk H: automatisch gemountet.
 
+** Automated Network Drive Mapping (GPO):**
+![Mapped Drive](mapped-drive.png)
+
 -------------------------------
 
 Phase 13: File Server Auditing & Security Forensics
@@ -265,8 +268,6 @@ Granulares Ordner-Auditing (SACL): Konfiguration der SACL auf NTFS-Ebene für HR
 Ergebnis & Forensische Analyse:
 Ein simulierter Datenverlust wurde im Security Event Log protokolliert. Über die Ereignis-ID 4663 konnte das verursachende Benutzerkonto (Admin-HR) und der genaue Dateipfad zweifelsfrei rekonstruiert werden.
 
-** Automated Network Drive Mapping (GPO):**
-![Mapped Drive](mapped-drive.png)
 
 -------------------------------
 
